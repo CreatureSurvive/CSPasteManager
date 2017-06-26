@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CSPasteManager.h"
 
 @interface ViewController : UIViewController
 
