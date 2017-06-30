@@ -46,7 +46,7 @@ Created and Maintained by [CreatureSurvive](https://creaturecoding.com/) (Dana B
 
 - This software is licensed under the MIT License, detailed in the file [LICENSE.md](https://github.com/CreatureSurvive/CSPasteManager/tree/master/LICENCE.md)
 - in addition to the License agreement you must also provie a lik to my website [https://creaturecoding.com](https://creaturecoding.com). if for any reason you do not wish to include my website in your project, then please contact me so we can discus another agreement.
-- __Pleas dont steel my code!__ if you like to use it, then go ahead. Just be sure to provide proper credit.
+- __Please dont steel my code!__ if you like to use it, then go ahead. Just be sure to provide proper credit.
 
 
 
