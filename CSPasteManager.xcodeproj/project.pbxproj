@@ -12,6 +12,7 @@
 		B805540A1F00913E00E3B94F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B80554091F00913E00E3B94F /* ViewController.m */; };
 		B805540F1F00913E00E3B94F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B805540E1F00913E00E3B94F /* Assets.xcassets */; };
 		B805541B1F00983200E3B94F /* CSPasteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B805541A1F00983200E3B94F /* CSPasteManager.m */; };
+		B80554201F00AF1100E3B94F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B805541F1F00AF1100E3B94F /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		B80554131F00913E00E3B94F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B80554191F00983200E3B94F /* CSPasteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPasteManager.h; sourceTree = "<group>"; };
 		B805541A1F00983200E3B94F /* CSPasteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPasteManager.m; sourceTree = "<group>"; };
+		B805541F1F00AF1100E3B94F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 		B80553F61F00913E00E3B94F = {
 			isa = PBXGroup;
 			children = (
+				B805541F1F00AF1100E3B94F /* Default-568h@2x.png */,
 				B80554011F00913E00E3B94F /* CSPasteManagerExample */,
 				B80554001F00913E00E3B94F /* Products */,
 			);
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B805540F1F00913E00E3B94F /* Assets.xcassets in Resources */,
+				B80554201F00AF1100E3B94F /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +267,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RUMWXF5QY3;
 				INFOPLIST_FILE = CSPasteManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CreatureCoding.CSPasteManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -275,6 +280,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RUMWXF5QY3;
 				INFOPLIST_FILE = CSPasteManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CreatureCoding.CSPasteManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -300,6 +306,7 @@
 				B80554181F00913E00E3B94F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

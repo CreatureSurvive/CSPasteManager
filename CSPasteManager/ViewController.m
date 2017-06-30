@@ -45,16 +45,19 @@
     _completeButton.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:_completeButton];
     
+    // ghostBinButton Constraints
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:ghostBinButton attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:ghostBinButton attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:-28.0]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[ghostBinButton]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(ghostBinButton)]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[ghostBinButton(==44)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(ghostBinButton)]];
     
+    // hasteBinButton Constraints
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:hasteBinButton attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:hasteBinButton attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:28.0]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[hasteBinButton]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(hasteBinButton)]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[hasteBinButton(==44)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(hasteBinButton)]];
     
+    // completionButton Constraints
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_completeButton attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[_completeButton]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_completeButton)]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_completeButton]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_completeButton)]];
