@@ -33,40 +33,38 @@
     }
 
     // create a task with the given request
-    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request
-                                                completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-                                                    // the task completed without error
-                                                    if (!error) {
+    [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        // the task completed without error
+        if (!error) {
 
-                                                        // no error check that the status code of the request returns a success code
-                                                        NSInteger statusCode = ((NSHTTPURLResponse *) response).statusCode;
+            // no error check that the status code of the request returns a success code
+            NSInteger statusCode = ((NSHTTPURLResponse *) response).statusCode;
 
-                                                        if (statusCode == 200) {
+            if (statusCode == 200) {
 
-                                                            // hastebin returns the URL in json format so we need to pars that
-                                                            if (service == CSPMPostServiceHasteBin) {
-                                                                // get the json string from the response data
-                                                                NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
-                                                                NSURL *URL = [NSURL URLWithString:[@"https://hastebin.com/" stringByAppendingString:json[@"key"]]];
-                                                                completion(URL, nil);
-                                                            }
-                                                                // if the service is not hastebin then we can get the URL directly from the response
-                                                            else {
-                                                                completion(response.URL, nil);
-                                                            }
-                                                        } else {
-                                                            // the request resulted in a non-successful statusCode
-                                                            // generate an error and return it
-                                                            error = [[NSError alloc] initWithDomain:NSURLErrorDomain code:statusCode userInfo:@{@"ERROR": response.description}];
-                                                            completion(nil, error);
-                                                        }
-                                                        // the task resulted in an error return the error
-                                                    } else {
-                                                        // error from the session
-                                                        completion(nil, error);
-                                                    }
-                                                }];
-    [dataTask resume];
+                // hastebin returns the URL in json format so we need to pars that
+                if (service == CSPMPostServiceHasteBin) {
+                    // get the json string from the response data
+                    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+                    NSURL *URL = [NSURL URLWithString:[@"https://hastebin.com/" stringByAppendingString:json[@"key"]]];
+                    completion(URL, nil);
+                }
+                    // if the service is not hastebin then we can get the URL directly from the response
+                else {
+                    completion(response.URL, nil);
+                }
+            } else {
+                // the request resulted in a non-successful statusCode
+                // generate an error and return it
+                error = [[NSError alloc] initWithDomain:NSURLErrorDomain code:statusCode userInfo:@{@"ERROR": response.description}];
+                completion(nil, error);
+            }
+            // the task resulted in an error return the error
+        } else {
+            // error from the session
+            completion(nil, error);
+        }
+    }] resume];
 }
 
 #pragma mark Private Utilities
